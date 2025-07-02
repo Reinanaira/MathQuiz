@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c3e50;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #1e2a38;
+}
+
+.status {
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.status p {
+  margin: 6px 0;
+}
+
+.progress {
+  width: 100%;
+  background: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0 15px;
+}
+
+#progress-bar {
+  height: 100%;
+  background: #007bff;
+  width: 100%;
+  transition: width 1s linear;
+}
+
+#question {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 12px;
+  transition: border 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 24px;
+}
+
+#feedback.correct {
+  color: #2e8b57;
+}
+
+#feedback.incorrect {
+  color: #c0392b;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
+}
